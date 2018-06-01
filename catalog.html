@@ -73,7 +73,7 @@
   </aside>
 
   <section class="sort-filter">
-    <h2>Результат сортировки</h2>
+    <h2 class="visually-hidden">Дополнительная сортировка</h2>
     <div class="sort">
       <span>Сортировка:</span>
       <ul class="sort-list">
@@ -97,10 +97,13 @@
       </ul>
     </div>
     <section class="show-items">
+      <h3 class="visually-hidden">Результат сортировки</h3>
       <ul class="catalog-items">
         <li>
           <figure>
-            <img class="item-img" src="img/item1.jpg">
+            <img class="item-img" src="img/item1.jpg" alt="Любительская селфи-палка">
+            <a class="link-button">В корзину</a>
+            <a class="add-compare">добавить к сравнению</a>
             <figcaption>
               <p><b>Любительская селфи-палка</b></p>
               <p>500 pуб.</p>
@@ -109,16 +112,22 @@
         </li>
         <li>
           <figure>
-            <img class="item-img" src="img/item2.jpg">
+            <img class="item-img" src="img/item2.jpg" alt="Профессиональная селфи-палка">
             <figcaption>
               <p><b>Профессиональная селфи-палка</b></p>
               <p>1500 pуб.</p>
+
+              <a class="link-button">В корзину</a>
+              <a class="add-compare">добавить к сравнению</a>
             </figcaption>
           </figure>
         </li>
         <li>
           <figure>
-            <img class="item-img" src="img/item3.jpg">
+            <img class="item-img" src="img/item3.jpg" alt="Непотопляемая селфи-палка">
+
+            <a class="link-button">В корзину</a>
+            <a class="add-compare">добавить к сравнению</a>
             <figcaption>
               <p><b>Непотопляемая селфи-палка</b></p>
               <p>2500 pуб.</p>
@@ -127,7 +136,10 @@
         </li>
         <li>
           <figure>
-            <img class="item-img" src="img/item4.jpg">
+            <img class="item-img" src="img/item4.jpg" alt="Селфи-палка «Следуй за мной»">
+
+            <a class="link-button">В корзину</a>
+            <a class="add-compare">добавить к сравнению</a>
             <figcaption>
               <p><b>Селфи-палка «Следуй за мной»</b></p>
               <p>4900 pуб.</p>
@@ -136,15 +148,28 @@
         </li>
       </ul>
     </section>
-
     <div class="paginator">
-      <button class="prev" type="button">Назад</button>
-      <ul class="page-number">
-        <li><button>1</button></li>
-        <li><button>2</button></li>
-        <li><button>3</button></li>
+      <ul class="pagination-list">
+        <li class="pagination-item">
+          <a class="prev" href="#prev">Назад</a>
+        </li>
+        <li class="padination-numbers">
+      <ul class="padination-numbers-list">
+        <li class="pagination-item">
+          <a href="#1">1</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#2">2</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#3">3</a>
+        </li>
+        </ul>
+</li>
+        <li class="pagination-item">
+          <a class="next" href="#next">Вперёд</a>
+        </li>
       </ul>
-      <button class="next" type="button">Вперёд</button>
     </div>
   </section>
 </main>
@@ -175,7 +200,8 @@
     </ul>
   </div>
   <div class="footer-right">
-    <span>Тел.:<a class="footer-tel" href="tel:+7(495) 495-95-95">+7(495) 495-95-95</a></span>
+    <span>Тел.:<a class="footer-tel" href="tel:+74954959595">+7(495) 495-95-95</a></span>
+    <p class="visually-hidden">Разработано:</p>
     <a class="footer-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
   </div>
 </footer>
