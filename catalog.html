@@ -9,8 +9,11 @@
   <a href="index.html" class="main-logo">
     <img class="logo header-logo" src="img/header-logo.png" width="164" height="36" alt="Device">
   </a>
-  <input class="main-search" type="text" placeholder="Поиск по сайту">
-  <button class="search-button" type="submit">Найти</button>
+  <form class="main-search" method="post" action="http://echo.htmlacademy.ru">
+    <label class="visually-hidden" for="main-search">Поиск по сайту</label>
+    <input class="main-search" name="search" id="main-search" type="text" placeholder="Поиск по сайту" required>
+    <button class="search-button" type="submit">Найти</button>
+  </form>
 
   <ul class="user-navigation">
     <li class="login-link"><a href="#">Валентин Петухов</a></li>
@@ -22,7 +25,7 @@
   </ul>
   <nav class="main-menu">
     <ul class="site-navigation">
-      <li class="site-navigation-catalog"><a class="main-links">Каталог товаров</a>
+      <li class="site-navigation-catalog"><a href="" class="main-links">Каталог товаров</a>
         <ul class="catalog-list">
           <li class="catalog-item-photo">
             <ul class="catalog-photo-list">
@@ -58,15 +61,41 @@
     <li>Моноподы для селфи</li>
   </ul>
   <aside class="filter-box">
-    <div class="filter-label">Фильтр:</div>
-    <form>
+    <div class="filter-label">
+      <h2>Фильтр:</h2>
+    </div>
+    <form class="filter" method="post" action="http://echo.htmlacademy.ru">
+      <fieldset class="filter-case">
+        <legend>
+          Стоимость:
+        </legend>
+        <div class="case-line">
+          <button type="button">От</button>
+          <button type="button">До</button>
+          <label>От<input type="number" name="min-case-value" value="0" min="0" max="10000"> </label>
+          <label>До<input type="number" name="max-case-value" value="5000" min="0" max="10000"> </label>
+        </div>
+      </fieldset>
+      <fieldset class="filter-color">
+        <legend>Цвет</legend>
+        <label><input class="visible-hidden" type="checkbox" name="black" checked> Черный</label>
+        <label><input class="visible-hidden" type="checkbox" name="white"> Белый</label>
+        <label><input class="visible-hidden" type="checkbox" name="blue" checked> Синий</label>
+        <label><input class="visible-hidden" type="checkbox" name="red" checked> Красный</label>
+        <label><input class="visible-hidden" type="checkbox" name="pink">Розовый</label>
+      </fieldset>
+      <fieldset class="filter-bluetooth">
+        <legend>Цвет</legend>
+        <label><input class="visible-hidden" type="radio" name="bluetooth" value="yes" checked> Есть</label>
+        <label><input class="visible-hidden" type="radio" name="bluetooth" value="no"> Нет</label>
+      </fieldset>
       <button class="link-button" type="submit">Показать</button>
     </form>
   </aside>
   <section class="sort-filter">
     <h2 class="visually-hidden">Дополнительная сортировка</h2>
     <div class="sort">
-      <span>Сортировка:</span>
+      <h3>Сортировка:</h3>
       <ul class="sort-list">
         <li class="filter-item">
           <a class="filter-item-btn" href="#">По цене</a>
@@ -80,10 +109,10 @@
       </ul>
       <ul class="sort-up-down">
         <li class="sort-up">
-          <a class="filter-up" href="#">Up</a>
+          <a class="filter-up" href="#"><span class="visually-hidden">По возрастанию</span></a>
         </li>
         <li class="sort-down">
-          <a class="filter-down" href="#">Down</a>
+          <a class="filter-down" href="#"><span class="visually-hidden">По убыванию</span></a>
         </li>
       </ul>
     </div>
@@ -91,31 +120,42 @@
       <h3 class="visually-hidden">Результат сортировки</h3>
       <ul class="catalog-items">
         <li>
-          <img class="item-img" src="img/catalog-item-1.jpg" alt="Любительская селфи-палка" height="380" width="360">
+          <a href="#">
+            <img class="item-img" src="img/catalog-item-1.jpg" alt="Любительская селфи-палка" height="380" width="360">
+          </a>
           <a class="link-button" href="#">В корзину</a>
           <a class="add-compare" href="#">добавить к сравнению</a>
-          <p><b>Любительская селфи-палка</b></p>
+          <h4>Любительская селфи-палка</h4>
           <p>500 pуб.</p>
         </li>
         <li>
-          <img class="item-img" src="img/catalog-item-2.jpg" alt="Профессиональная селфи-палка" height="380" width="360">
+          <a href="#">
+            <img class="item-img" src="img/catalog-item-2.jpg" alt="Профессиональная селфи-палка" height="380"
+                 width="360">
+          </a>
           <a class="link-button" href="#">В корзину</a>
           <a class="add-compare" href="#">добавить к сравнению</a>
-          <p><b>Профессиональная селфи-палка</b></p>
+          <h4>Профессиональная селфи-палка</h4>
           <p>1500 pуб.</p>
+
         </li>
         <li>
-          <img class="item-img" src="img/catalog-item-3.jpg" alt="Непотопляемая селфи-палка" height="380" width="360">
+          <a href="#">
+            <img class="item-img" src="img/catalog-item-3.jpg" alt="Непотопляемая селфи-палка" height="380" width="360">
+          </a>
           <a class="link-button" href="#">В корзину</a>
           <a class="add-compare" href="#">добавить к сравнению</a>
-          <p><b>Непотопляемая селфи-палка</b></p>
+          <h4>Непотопляемая селфи-палка</h4>
           <p>2500 pуб.</p>
         </li>
-        <li>
-          <img class="item-img" src="img/catalog-item-4.jpg" alt="Селфи-палка «Следуй за мной»" height="380" width="360">
+        <li class="new-label">
+          <a href="#">
+            <img class="item-img" src="img/catalog-item-4.jpg" alt="Селфи-палка «Следуй за мной»" height="380"
+                 width="360">
+          </a>
           <a class="link-button" href="#">В корзину</a>
           <a class="add-compare" href="#">добавить к сравнению</a>
-          <p><b>Селфи-палка «Следуй за мной»</b></p>
+          <h4>Селфи-палка «Следуй за мной»</h4>
           <p>4900 pуб.</p>
         </li>
       </ul>
@@ -139,7 +179,7 @@
 </main>
 <footer class="main-footer">
   <div class="footer-left">
-    <a class="main-logo">
+    <a href="index.html" class="main-logo">
       <img class="logo footer-logo" src="img/footer-logo.png" alt="Device" width="163" height="36">
     </a>
   </div>

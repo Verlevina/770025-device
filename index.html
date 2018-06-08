@@ -275,14 +275,14 @@
   <form class="write-popap-feedback" method="post" action="http://echo.htmlacademy.ru">
     <div class="popap-half">
     <label for="popup-name">Ваше имя:</label>
-    <input type="text" id="popup-name" name="name" placeholder="Имя Фамилия">
+    <input type="text" id="popup-name" name="name" placeholder="Имя Фамилия" required>
     </div>
     <div class="popap-half">
       <label for="popup-email">Ваш e-mail:</label>
-      <input type="email" id="popup-email" name="email" placeholder="email@example.com">
+      <input type="email" id="popup-email" name="email" placeholder="email@example.com" required>
     </div>
     <label for="popup-text">Текст письма:</label>
-    <textarea id='popup-text' name="text" placeholder="В свободной форме">
+    <textarea id='popup-text' name="text" placeholder="В свободной форме" required>
     </textarea>
     <button class="link-button" type="submit">Отправить</button>
   </form>
