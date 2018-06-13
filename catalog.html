@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main-css.css" rel="stylesheet">
 </head>
 <body>
 <header class="main-header">
@@ -80,14 +82,19 @@
       </fieldset>
       <fieldset class="filter-color">
         <legend>Цвет</legend>
-        <label><input class="visually-hidden" type="checkbox" name="black" checked> Черный</label>
-        <label><input class="visually-hidden" type="checkbox" name="white"> Белый</label>
-        <label><input class="visually-hidden" type="checkbox" name="blue" checked> Синий</label>
-        <label><input class="visually-hidden" type="checkbox" name="red" checked> Красный</label>
-        <label><input class="visually-hidden" type="checkbox" name="pink">Розовый</label>
+        <input class="visually-hidden" id="black-color" type="checkbox" name="black" checked>
+        <label for="black-color">Черный</label>
+        <input class="visually-hidden" id="white-color" type="checkbox" name="white">
+        <label for="white-color"> Белый</label>
+        <input class="visually-hidden" id="blue-color" type="checkbox" name="blue" checked>
+        <label for="blue-color"> Синий</label>
+        <input class="visually-hidden" id="red-color" type="checkbox" name="red" checked>
+        <label for="red-color"> Красный</label>
+        <input class="visually-hidden" id="pink-color" type="checkbox" name="pink">
+        <label for="pink-color">Розовый</label>
       </fieldset>
       <fieldset class="filter-bluetooth">
-        <legend>Цвет</legend>
+        <legend>Bluetooth</legend>
         <label><input class="visually-hidden" type="radio" name="bluetooth" value="yes" checked> Есть</label>
         <label><input class="visually-hidden" type="radio" name="bluetooth" value="no"> Нет</label>
       </fieldset>
@@ -135,7 +142,6 @@
           <a class="add-compare" href="#">добавить к сравнению</a>
           <h4>Профессиональная селфи-палка</h4>
           <p>1500 pуб.</p>
-
         </li>
         <li>
           <img class="item-img" src="img/catalog-item-3.jpg" alt="Непотопляемая селфи-палка" height="380" width="360">
@@ -158,7 +164,7 @@
       <a class="prev" href="#">Назад</a>
       <ul class="padination-numbers-list">
         <li class="pagination-item">
-          <a href="#">1</a>
+          <a class="active" href="#">1</a>
         </li>
         <li class="pagination-item">
           <a href="#">2</a>

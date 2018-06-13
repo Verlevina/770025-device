@@ -1,0 +1,593 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans Light", "Arial", sans-serif;
+  font-size: 15px;
+  color: rgb(70, 70, 70);
+  line-height: 30px;
+  font-weight: 300;
+  background-color: #ffffff;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Gilroy ExtraBold";
+  font-style: normal;
+  src: url(../fonts/gilroyextrabold.woff) format("woff"), url(../fonts/gilroyextrabold.woff2) format("woff2")
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "Gilroy Light";
+  font-style: normal;
+  src: url(../fonts/gilroylight.woff) format("woff"), url(../fonts/gilroylight.woff2) format("woff2")
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url(../fonts/opensans.woff) format("woff"), url(../fonts/opensans.woff2) format("woff2")
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "Open Sans Light";
+  font-style: normal;
+  src: url(../fonts/opensanslight.woff) format("woff"), url(../fonts/opensanslight.woff2) format("woff2")
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  background-color: #f7e296;
+  color: #000000;
+}
+
+.main-logo[href]:hover {
+  opacity: 0.6;
+}
+
+.main-logo[href]:active {
+  opacity: 0.3;
+}
+
+.main-search input[type="text"] {
+  background-color: #f7e296;
+  border: none;
+  text-align: left;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.main-search:hover input[type="text"] {
+  opacity: 0.6;
+}
+
+.main-search input[type="text"]:focus {
+  opacity: 1;
+  color: #000000;
+  border-bottom: 2px solid #000000;
+}
+
+.main-search input[type="text"]:valid + button {
+  display: inline-block;
+}
+
+.search-button {
+  border: 2px solid #000000;
+  background: none;
+  text-align: center;
+  display: none;
+}
+
+.search-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.user-navigation,
+.user-buy {
+  list-style: none;
+}
+
+.user-navigation a,
+.user-buy a {
+  color: #000000;
+}
+
+.user-navigation a:hover,
+.user-buy a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.user-navigation a:focus,
+.user-buy a:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*menu*/
+.site-navigation {
+  font-size: 18px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+
+.site-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.site-navigation a:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-menu ul {
+  list-style: none;
+}
+
+.catalog-list {
+  font-size: 15px;
+  font-family: "Open Sans Light", "Arial", sans-serif;
+  color: rgb(0, 0, 0);
+  line-height: 36px;
+  text-align: left;
+  text-transform: none;
+  font-weight: 400;
+}
+
+/*слайдер*/
+.promo-slider button{
+border:1px solid #000000;
+  background:none;
+  border-radius:50%;
+}
+.promo-slider button.active{
+  
+
+}
+.promo-slider {
+  background-image: linear-gradient(to bottom, #f7e296 0%,
+  #f7e296 25%, #ffffff 25%, #ffffff 100%);
+  color: #000000;
+}
+
+.promo-slider .lead {
+  font-size: 47px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 56px;
+  text-align: left;
+}
+
+.link-button {
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  text-align: center;
+  color: #000000;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 33%,
+  #f0c52e 33%, #f0c52e 66%, transparent 66%);
+}
+
+.link-button:hover {
+  background-color: #f0c52e;
+}
+
+.link-button:focus,
+.link-button:active {
+  color: rgba(0, 0, 0, 0.5);
+  background-color: #f0c52e;
+}
+
+.item-description tr {
+  font-size: 36px;
+  font-family: "Gilroy Light", "Arial", sans-serif;
+  color: rgb(0, 0, 0);
+  line-height: 48px;
+  text-align: left;
+}
+
+.item-description tr:last-child {
+  font-family: "Open Sans Light", "Arial", sans-serif;
+  font-size: 13px;
+  color: rgb(70, 70, 70);
+  line-height: 20px;
+  text-align: left;
+}
+
+/*Product*/
+.product-list {
+  list-style: none;
+}
+
+.product-item h3 {
+  color: #000000;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.product-item:active h3,
+.product-item:active img {
+  opacity: 0.3;
+}
+
+.product-item div {
+  background-color: #f7e296;
+}
+
+.product-item:hover div,
+.product-item:focus div {
+  background-color: #f0c52e;
+}
+
+.product-item:active div {
+  background-color: #f0c52e;
+}
+
+/*Дополнительные услуги*/
+.service {
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 30%, #e5e5e5 30%);
+
+}
+
+.service-item:active,
+.service-item:focus {
+  background-color: #000000;
+  color: rgb(247, 225, 132);
+  background-image: none;
+}
+
+.service h3 {
+  font-size: 21px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  color: #000000;
+  line-height: 48px;
+  text-align: left;
+}
+
+.service-check {
+  border-right: 7px solid #000000;
+}
+
+.service section {
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.service-delivery {
+  background-image: url("../img/service-delivery.svg");
+}
+
+.service-warranty {
+  background-image: url("../img/service-warranty.svg");
+}
+
+.service-credit {
+  background-image: url("../img/service-credit.svg");
+}
+
+/*поставщики*/
+
+.logo-list {
+  list-style: none;
+}
+
+.logotype a {
+  opacity: 0.2;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray; /* IE 6-9 */
+}
+
+.logotype a:hover {
+  opacity: 1;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+  filter: none; /* IE 6-9 */
+}
+
+.logotype a:focus {
+  opacity: 1;
+}
+
+.about-us h2,
+.contacts h2 {
+  font-size: 47px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  color: #000000;
+  line-height: 48px;
+  text-align: left;
+}
+
+.logistic-list {
+  font-size: 18px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  color: #e5e5e5;
+  text-align: left;
+  list-style-type: circle;
+}
+
+.logistic-list span {
+  color: #000000;
+}
+
+/*footer*/
+.main-footer {
+  background-color: #464646;
+  color: #ffffff;
+}
+
+.main-footer ul {
+  list-style: none;
+}
+
+.footer-user-navigation a,
+.footer-user-buy a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-user-navigation a:hover,
+.footer-user-buy a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.footer-user-navigation a:focus,
+.footer-user-buy a:focus {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-menu a {
+  color: rgb(255, 255, 255);
+}
+
+.footer-menu a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-menu a:focus {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-tel {
+  color: #ffffff;
+}
+
+.close-popup {
+  background-color: #f7e296;
+  border: none;
+}
+
+.close-popup:hover {
+  background-color: #f0c52e;
+}
+
+.close-popup:active {
+  background-color: #faedc0;
+}
+
+.write-popap-feedback label {
+  color: #000000;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.write-popap-feedback input[type="text"],
+.write-popap-feedback input[type="email"],
+.write-popap-feedback textarea {
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.write-popap-feedback input[type="text"]:hover,
+.write-popap-feedback input[type="email"]:hover,
+.write-popap-feedback textarea:hover {
+  background-color: #eaeaea;
+
+}
+
+.write-popap-feedback input[type="text"]:focus,
+.write-popap-feedback input[type="email"]:focus,
+.write-popap-feedback textarea:focus {
+  background-color: #ffffff;
+  border: 2px solid #f7e296;
+}
+
+.write-popap-feedback input[type="email"]:invalid {
+  background-color: #f6dada;
+}
+
+h1 {
+  font-size: 47px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  color: #000000;
+  line-height: 48px;
+}
+
+.page-navigation {
+  list-style: none;
+}
+
+.page-navigation a,
+.page-navigation li:last-child {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.page-navigation a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.page-navigation a:focus {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.filter-box {
+  background-color: #eeeeee;
+}
+
+.filter-label {
+  background-color: #dcdcdc;
+  color: #000000;
+}
+
+.filter-label h2,
+.sort-filter h3 {
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.filter-box fieldset {
+  border: none;
+
+}
+
+.case-line button {
+  cursor: pointer;
+}
+
+.filter-box legend {
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  border-top: 2px solid #000000;
+}
+
+.filter-color input[type="checkbox"]:disabled + label {
+  color: rgb(166, 166, 166);
+}
+
+.sort {
+  background-color: #ebebeb;
+}
+
+.sort-list {
+  list-style: none;
+}
+
+.sort-list a {
+  font-size: 14px;
+  font-family: "OpenSans", "Arial", sans-serif;
+  color: rgba(0, 0, 0, 0.3);
+  line-height: 18px;
+  text-align: left;
+}
+
+.sort-list a:hover {
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.sort-list a:focus {
+  color: rgba(0, 0, 0, 1)
+}
+
+.sort-up-down {
+  list-style: none;
+}
+
+.catalog-items {
+  list-style: none;
+}
+
+.show-items h4 {
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.item-img:hover,
+.item-img:active {
+  opacity: 0.7;
+}
+
+.add-compare {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.add-compare:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.add-compare:focus {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.paginator {
+  background-color: #ebebeb;
+}
+
+.paginator a {
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.paginator > a:hover {
+  background-color: #d9d9d9;
+}
+
+.paginator > a:focus {
+  background-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.padination-numbers-list {
+  list-style: none;
+}
+
+.padination-numbers-list a {
+  color: rgba(0, 0, 0, 0.3);
+
+}
+
+.padination-numbers-list a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.padination-numbers-list a:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+.padination-numbers-list a.active {
+  color: rgba(0, 0, 0, 1);
+}

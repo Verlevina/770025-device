@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main-css.css" rel="stylesheet">
 </head>
 <body>
 <header class="main-header">
   <a class="main-logo">
     <img class="logo header-logo" src="img/header-logo.png" width="164" height="36" alt="Device">
   </a>
-
   <form class="main-search" method="post" action="http://echo.htmlacademy.ru">
     <label class="visually-hidden" for="main-search">Поиск по сайту</label>
-    <input class="main-search" name="search" id="main-search" type="text" placeholder="Поиск по сайту">
+    <input name="search" id="main-search" type="text" placeholder="Поиск по сайту" required>
     <button class="search-button" type="submit">Найти</button>
   </form>
-
   <ul class="user-navigation">
     <li class="login-link"><a href="#">Войти</a></li>
   </ul>
@@ -59,14 +59,14 @@
   <h1 class="visually-hidden">Интернет-магазин Device</h1>
   <section class="promo-slider">
     <h2 class="visually-hidden">Промо слайдер</h2>
-    <input id="first-slide" name="promo-slider-button" type="radio"><label for="first-slide"></label>
-    <input id="second-slide" name="promo-slider-button" type="radio"><label for="second-slide"></label>
-    <input id="third-slide" name="promo-slider-button" type="radio"><label for="third-slide"></label>
+    <button class="active" id="first-slide"></button>
+    <button id="second-slide"></button>
+    <button id="third-slide"></button>
     <section class="promo-slide promo-slide1">
       <h3 class="visually-hidden">Монопод</h3>
       <img class="promo-slide-img" src="img/slider-monopod.png" alt="Селфи-палка" width="384" height="486">
       <p class="lead">
-        Делай селфи, как Бен Стиллер!
+        Делай селфи,<br>как Бен Стиллер!
       </p>
       <p>Самая длинная палка для селфи доступна в нашем магазине.
         Восемь (Восемь, Карл!) метров длинной и весом 5 килограмм </p>
@@ -88,7 +88,7 @@
       <h3 class="visually-hidden">Фитнес-браслет</h3>
       <img class="promo-slide-img" src="img/slider-fitness-bracelet.png" alt="Фитнес-браслет" width="345" height="485">
       <p class="lead">
-        Худеем правильно!
+        Худеем<br> правильно!
       </p>
       <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету. </p>
       <a href="#" class="link-button">Подробнее</a>
@@ -109,7 +109,7 @@
       <h3 class="visually-hidden">Квадрокоптер</h3>
       <img class="promo-slide-img" src="img/slider-quadcopter.png" alt="квадрокоптер" width="526" height="334">
       <p class="lead">
-        Порхает как бабочка, жалит как пчела!
+        Порхает как бабочка,<br> жалит как пчела!
       </p>
       <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
         камеру. </p>
@@ -127,58 +127,66 @@
         </tr>
       </table>
     </section>
-
   </section>
   <section class="product">
     <h2 class="visually-hidden">Наши товары</h2>
     <ul class="product-list">
-      <li class="product-item">
-        <a href="#">
+      <li>
+        <a class="product-item" href="#">
           <h3>Виртуальная реальность</h3>
-          <img src="img/popular-1.svg" alt="" width="97" height="55">
+          <div>
+            <img src="img/popular-1.svg" alt="" width="97" height="55">
+          </div>
         </a>
       </li>
-      <li class="product-item">
-        <a href="#">
+      <li>
+        <a class="product-item" href="#">
           <h3>Моноподы для селфи</h3>
-          <img src="img/popular-2.svg" alt="" width="86" height="117">
+          <div>
+            <img src="img/popular-2.svg" alt="" width="86" height="117">
+          </div>
         </a>
       </li>
-      <li class="product-item">
-        <a href="#">
+      <li>
+        <a class="product-item" href="#">
           <h3>Экшн-камеры</h3>
-          <img src="img/popular-3.svg" alt="" width="71" height="87">
+          <div>
+            <img src="img/popular-3.svg" alt="" width="71" height="87">
+          </div>
         </a>
       </li>
-      <li class="product-item">
-        <a href="#">
+      <li>
+        <a class="product-item" href="#">
           <h3>фитнес-браслеты</h3>
-          <img src="img/popular-4.svg" alt="" width="107" height="65">
+          <div>
+            <img src="img/popular-4.svg" alt="" width="107" height="65">
+          </div>
         </a>
       </li>
-      <li class="product-item">
-        <a href="#">
+      <li>
+        <a class="product-item" href="#">
           <h3>Умные часы</h3>
-          <img src="img/popular-5.svg" alt="" width="56" height="98">
+          <div>
+            <img src="img/popular-5.svg" alt="" width="56" height="98">
+          </div>
         </a>
       </li>
-      <li class="product-item">
-        <a href="#">
+      <li>
+        <a class="product-item" href="#">
           <h3>Квадрокоптеры</h3>
-          <img src="img/popular-6.svg" alt="" width="132" height="69">
+          <div>
+            <img src="img/popular-6.svg" alt="" width="132" height="69">
+          </div>
         </a>
       </li>
     </ul>
   </section>
   <section class="service">
     <h2 class="visually-hidden">Дополнительные услуги</h2>
-    <input type="radio" id="service-delivery" name="service-check">
-    <input type="radio" id="service-warranty" name="service-check">
-    <input type="radio" id="service-credit" name="service-check">
     <div class="service-check">
-      <label class="link-button service-item" for="service-delivery">Доставка</label>
-      <label class="link-button service-item" for="service-warranty">Гарантия</label>
-      <label class="link-button service-item" for="service-credit">Кредит</label>
+      <button class="link-button service-item" type="button"><span>Доставка</span></button>
+      <button class="link-button service-item" type="button"><span>Гарантия</span></button>
+      <button class="link-button service-item" type="button"><span>Кредит</span></button>
     </div>
     <section class="service-delivery">
       <h3>Доставка</h3>
@@ -203,7 +211,7 @@
     </section>
   </section>
   <section class="logotype">
-    <h2 class="visually-hidden">Компании-партнеры</h2>
+    <h2 class="visually-hidden">Компании-поставщики</h2>
     <ul class="logo-list">
       <li><a href="#"><img src="img/logotype-dji.png" class="logo-item" alt="dji" height="100" width="260"></a></li>
       <li><a href="#"><img src="img/logotype-sp-gadgets.png" class="logo-item" alt="sp-gadgets" height="100"
@@ -218,9 +226,9 @@
     <p>Мы можем доставить ваш товар в самые отдаленные точки России!
       DEVICE работает со многими транспортными компаниями:</p>
     <ul class="logistic-list">
-      <li>Деловые линии</li>
-      <li>Автотрейдинг</li>
-      <li>ЖелДорЭкспедиция</li>
+      <li><span>Деловые линии</span></li>
+      <li><span>Автотрейдинг</span></li>
+      <li><span>ЖелДорЭкспедиция</span></li>
     </ul>
     <a class="link-button" href="#">Подробнее о нас</a>
   </section>
@@ -242,18 +250,18 @@
     </a>
     <p class="footer-adress">г. Москва, ул. Строителей, 15</p>
   </div>
-  <ul class="footer-user-navigation">
+  <ul class=" user-navigation footer-user-navigation">
     <li class="login-link"><a href="#">Войти</a></li>
   </ul>
-  <ul class="footer-user-buy">
+  <ul class="user-buy footer-user-buy">
     <li class="user-buy-compare"><a href="#">Сравнить</a></li>
     <li class="user-buy-basket"><a href="#">Корзина</a></li>
   </ul>
   <div class="footer-center">
-    <ul class="footer-menu">
-      <li class="site-navigation-delivery footer-menu-item"><a class="main-links" href="#">Доставка</a></li>
-      <li class="site-navigation-warranty footer-menu-item"><a class="main-links" href="#">Гарантия</a></li>
-      <li class="site-navigation-contacts footer-menu-item"><a class="main-links" href="#">Контакты</a></li>
+    <ul class="site-navigation footer-menu">
+      <li><a class="main-links" href="#">Доставка</a></li>
+      <li><a class="main-links" href="#">Гарантия</a></li>
+      <li><a class="main-links" href="#">Контакты</a></li>
     </ul>
     <ul class="footer-social">
       <li class="social-btn social-btn-fb"><a href="#">Facebook</a></li>
