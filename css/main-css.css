@@ -67,11 +67,11 @@ a {
 }
 
 .main-search input[type="text"] {
-  background-color: #f7e296;
-  border: none;
   text-align: left;
   color: #000000;
   opacity: 0.3;
+  background-color: #f7e296;
+  border: none;
 }
 
 .main-search:hover input[type="text"] {
