@@ -58,11 +58,10 @@ a {
   margin:auto;
 }
 .main-header {
-  padding:0 20px;
   color: #000000;
   background-color: #f7e296;
   position:relative;
-  padding:50px 60px;
+  padding:50px 60px 40px 60px;
   display:flex;
   flex-direction:column;
 }
@@ -190,6 +189,9 @@ a {
 
 .catalog-item-wrap {
   position:absolute;
+  left:0;
+  padding-left:60px;
+  width:1140px;
   z-index:999;
   display:none;
   margin-top:40px;
