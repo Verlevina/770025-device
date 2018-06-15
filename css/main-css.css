@@ -576,6 +576,7 @@ a {
   background-color: #464646;
 }
 .main-footer {
+  display:flex;
   margin-top:90px;
   color: #ffffff;
   padding:65px 10px;
@@ -584,7 +585,27 @@ a {
 .main-footer ul {
   list-style: none;
 }
-
+.footer-left{
+  width:200px;
+}
+.footer-right-wrap{
+  flex-grow:1;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+}
+.footer-bottom-wrap{
+  margin-bottom:50px;
+  display:flex;
+  justify-content:center;
+  width:100%;
+}
+.footer-right{
+  width:200px;
+}
+.footer-center{
+  margin:0 auto;
+}
 .footer-user-navigation a,
 .footer-user-buy a {
   color: rgba(255, 255, 255, 0.7);
