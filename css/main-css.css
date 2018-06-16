@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  padding-top:40px;
+  min-width:1200px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 15px;
@@ -54,16 +54,20 @@ a {
   text-decoration: none;
 }
 .container{
-  width:1200px;
+  width:1160px;
   margin:auto;
+  padding:0 20px;
 }
 .main-header {
   color: #000000;
   background-color: #f7e296;
   position:relative;
-  padding:50px 60px 40px 60px;
+  padding:43px 60px 49px 60px;
   display:flex;
   flex-direction:column;
+}
+.header{
+  margin-top:40px;
 }
 
 .header-logo{
@@ -166,7 +170,7 @@ a {
 }
 /*menu*/
 .main-menu{
-  margin-top:50px;
+  margin-top:39px;
 }
 .site-navigation {
   display:flex;
@@ -176,6 +180,7 @@ a {
   font-size: 18px;
   font-family: "Gilroy", "Arial", sans-serif;
   letter-spacing: 3px;
+  word-spacing: 4px;
   font-weight:bold;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
@@ -245,10 +250,10 @@ a {
   margin-left:auto;
 }
 .site-navigation-warranty{
-  margin-left:30px;
+  margin-left:40px;
 }
 .site-navigation-contacts{
-  margin-left:100px;
+  margin-left: 114px
 }
 /*слайдер*/
 .promo-slider button {
@@ -723,13 +728,17 @@ a {
 .write-popap-feedback textarea {
   width: 100%;
 }
+.catalog-main{
+  margin-top:39px;
+}
 
-h1 {
-  margin:40px 60px;
+.catalog-main h1 {
+  margin:0 60px 19px 60px;
   font-size: 47px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight:bold;
   color: #000000;
+  word-spacing:3px;
   line-height: 48px;
 }
 
@@ -753,6 +762,7 @@ h1 {
   color: rgba(0, 0, 0, 0.1);
 }
 .catalog-wrapper{
+  margin-top: 45px;
   display:flex;
 }
 
@@ -760,7 +770,7 @@ h1 {
   display:flex;
   flex-direction: column;
   align-items:flex-end;
-  width:35%;
+  width:calc(((100% - 1200px)/2) + 348px);
   background-color: #eeeeee;
 }
 .filter-wrapper{
@@ -777,7 +787,7 @@ h1 {
   width: 100%;
   display:flex;
   justify-content: flex-end;
-  padding:27px 0;
+  padding: 22px 0;
   background-color: #dcdcdc;
   color: #000000;
 }
@@ -786,10 +796,10 @@ h1 {
 .sort-filter h3 {
   margin:0;
   font-family: "Gilroy", "Arial", sans-serif;
-  letter-spacing: 3px;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: 4px;
   color: #000000;
   text-transform: uppercase;
 }
@@ -825,19 +835,17 @@ h1 {
   background-color: #ebebeb;
 }
 .sort{
-  width:830px;
-  padding: 21px 20px 21px 73px;
+  width:852px;
+  padding: 18px 20px 15px 73px;
   display:flex;
   align-items:baseline;
 }
-.sort-filter{
-  width:65%;
-}
+
 .sort-list {
   list-style: none;
   padding:0;
   margin:0;
-  margin-left:40px;
+  margin-left:46px;
 }
 
 .sort-list a {
