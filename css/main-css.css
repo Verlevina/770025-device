@@ -767,6 +767,7 @@ a {
 .catalog-wrapper{
   position:relative;
   margin-top: 45px;
+  z-index:1;
 background-image:linear-gradient(to right, #eeeeee 0%, #eeeeee calc(((100% - 1200px)/2) + 348px),
 #ffffff calc(((100% - 1200px)/2) + 348px), #ffffff 100%);
 }
@@ -774,6 +775,7 @@ background-image:linear-gradient(to right, #eeeeee 0%, #eeeeee calc(((100% - 120
   content: "";
   display: block;
   position: absolute;
+  z-index: -1;
   left: 0;
   top: 0;
   height: 70px;
@@ -878,11 +880,11 @@ background-image:linear-gradient(to right, #eeeeee 0%, #eeeeee calc(((100% - 120
 }
 
 .sort-list a:hover {
-  color: rgba(0, 0, 0, 0.6)
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .sort-list a:focus {
-  color: rgba(0, 0, 0, 1)
+  color: rgba(0, 0, 0, 1);
 }
 
 .sort-list a.filter-active{
