@@ -203,7 +203,7 @@ a {
   position:absolute;
   left:0;
   padding-left:60px;
-  width:1140px;
+  width:1100px;
   z-index:999;
   display:none;
   padding-top:30px;
@@ -729,7 +729,7 @@ a {
 }
 
 .write-popap-feedback textarea {
-  width: 100%;
+  width: 100px;
 }
 .catalog-main{
   margin-top:39px;
