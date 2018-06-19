@@ -63,7 +63,7 @@ a {
   color: #000000;
   background-color: #f7e296;
   position:relative;
-  padding:43px 60px 49px 60px;
+  padding:36px 60px 49px 60px;
   display:flex;
   flex-direction:column;
 }
@@ -73,7 +73,7 @@ a {
 
 .header-logo{
   position:absolute;
-  top:-10px;
+  top:-20px;
 }
 .main-logo[href]:hover {
   opacity: 0.6;
@@ -82,21 +82,42 @@ a {
 .main-logo[href]:active {
   opacity: 0.3;
 }
-
+.main-search p{
+  position:relative;
+  padding:0;
+  padding-left:25px;
+  margin:0;
+  font-size:0;
+}
+.main-search p::before{
+  content:"";
+  position:absolute;
+  top: 14px;
+  left: 3px;
+  height:20px;
+  width:20px;
+  background:url("../img/header-search.svg") no-repeat 0 0;
+}
+.main-search label{
+  font-size:16px;
+}
 .main-search input[type="text"] {
+  padding:13px;
   border: none;
-
   text-align: left;
   color: #000000;
 
   opacity: 0.3;
+  font-size:16px;
   background-color: #f7e296;
 
 }
+
 .user-search-wrapper{
   display:flex;
   align-items:baseline;
   justify-content:space-between;
+  flex-wrap:wrap;
 }
 
 .main-search:hover input[type="text"] {
@@ -105,7 +126,7 @@ a {
 
 .main-search input[type="text"]:focus {
   border-bottom: 2px solid #000000;
-
+  padding-bottom:11px;
   color: #000000;
 
   opacity: 1;
@@ -123,9 +144,11 @@ a {
 
 .search-button {
   display: none;
+  padding:11px 13px 11px 13px;
   border: 2px solid #000000;
   text-align: center;
   background: none;
+  font-size:16px;
 }
 
 .search-button:hover {
@@ -138,9 +161,10 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 .user-block-wrapper{
-  width:500px;
+  width: 534px;
   display:flex;
   justify-content:space-between;
+  flex-wrap:wrap;
 }
 
 .user-navigation,
@@ -149,7 +173,34 @@ a {
   padding:0;
   margin:0;
 }
+.user-navigation a,
+.user-buy a{
+  position:relative;
+  padding-left:30px;
+  display:block;
+}
+.user-navigation a::before,
+.user-buy a::before{
+  content:"";
+  position:absolute;
+  top: 9px;
+  left: 9px;
+  height:20px;
+  width:20px;
+}
+.user-navigation a::before{
+  left:4px;
+}
+.login-link a::before{
+background:url("../img/header-user.svg") no-repeat 0 0;
+}
+.user-buy-compare a::before{
+  background:url("../img/header-compare.svg") no-repeat 0 0;
+}
+.user-buy-basket a::before{
+  background:url("../img/header-cart.svg") no-repeat 0 0;
 
+}
 .user-navigation a,
 .user-buy a {
   color: #000000;
@@ -167,11 +218,11 @@ a {
 .user-navigation li,
 .user-buy li{
   display:inline-block;
-  padding-left:20px;
+  padding-left: 31px;
 }
 /*menu*/
 .main-menu{
-  margin-top:39px;
+  margin-top:32px;
 }
 .site-navigation {
   display:flex;
@@ -272,16 +323,20 @@ a {
 .promo-slider {
   padding:0 20px;
   background-image: linear-gradient(to bottom, #f7e296 0%,
-  #f7e296 100px, #ffffff 100px, #ffffff 100%);
+  #f7e296 115px, #ffffff 115px, #ffffff 100%);
   color: #000000;
 }
 .promo-slide{
   display:flex;
-  justify-content:space-around;
+  flex-wrap:wrap;
 }
 .promo-slide-img{
 
-  margin: 0 auto;
+  margin-left: 70px;
+  margin-top: 4px;
+}
+.promo-img-wrap{
+  width: 580px;
 }
 .slide-img-monopod{
   width:384px;
@@ -299,16 +354,21 @@ a {
 .promo-slider .lead {
   padding:0;
   font-size: 47px;
+  margin-bottom:20px;
   font-family: "Gilroy", "Arial", sans-serif;
   color: rgb(0, 0, 0);
   font-weight: bold;
   line-height: 56px;
   text-align: left;
+  letter-spacing: 0.6px;
 }
 .slider-wrapper{
-  width:500px;
-  padding:0 60px 0 20px;
+  width: 500px;
+  padding: 35px 40px 0 0;
 
+}
+.slider-wrapper p:not(.lead){
+  margin-bottom:40px;
 }
 .link-button {
   position:relative;
@@ -320,7 +380,7 @@ a {
   vertical-align: middle;
   font-family: "Gilroy", "Arial", sans-serif;
   letter-spacing: 3px;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: bold;
   line-height:24px;
   text-align: center;
@@ -332,19 +392,19 @@ a {
 
 .link-button::before {
   content: "";
-  position: relative;
-  display: block;
-  top: 20px;
+  position: absolute;
+  top: 18px;
   left: 0;
   z-index: -1;
-  width: 100px;
-  height: 10px;
+  width: 220px;
+  height: 7px;
   background-color: #f0c52e;
   transition: all 0.2s ease-in-out;
 }
 
 .link-button:hover::before{
-
+height:40px;
+  top:0;
 }
 
 .link-button:focus,
@@ -352,7 +412,12 @@ a {
   color: rgba(0, 0, 0, 0.5);
   background-color: #f0c52e;
 }
-
+.item-description{
+  margin-top:45px;
+}
+.item-description td{
+  margin-right:20px;
+}
 .item-description tr {
   font-size: 36px;
   font-family: "Gilroy", "Arial", sans-serif;

@@ -12,13 +12,15 @@
 <div class="container">
   <div class="main-header">
     <a class="main-logo header-logo">
-      <img class="logo header-logo" src="img/header-logo.png" width="164" height="36" alt="Device">
+      <img class="logo" src="img/header-logo.png" width="164" height="36" alt="Device">
     </a>
     <div class="user-search-wrapper">
       <form class="main-search" method="post" action="http://echo.htmlacademy.ru">
+       <p>
         <label class="visually-hidden" for="main-search">Поиск по сайту</label>
         <input name="search" id="main-search" type="text" placeholder="Поиск по сайту" required>
         <button class="search-button" type="submit">Найти</button>
+       </p>
       </form>
       <div class="user-block-wrapper">
         <ul class="user-navigation">
@@ -75,8 +77,10 @@
       <button id="third-slide">третий слайд</button>
       <section class="promo-slide promo-slide1">
         <h3 class="visually-hidden">Монопод</h3>
+        <div class="promo-img-wrap">
         <img class="promo-slide-img slide-img-monopod" src="img/slider-monopod.png" alt="Селфи-палка" width="384"
              height="486">
+        </div>
         <div class="slider-wrapper">
           <p class="lead">
             Делай селфи,<br>как Бен Стиллер!
@@ -106,8 +110,10 @@
           <p class="lead">
             Худеем<br> правильно!
           </p>
+          <div>
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету. </p>
-          <a href="#" class="link-button">Подробнее</a>
+          </div>
+            <a href="#" class="link-button">Подробнее</a>
           <table class="item-description">
             <tr>
               <td>48 часов</td>
@@ -130,8 +136,10 @@
           <p class="lead">
             Порхает как бабочка,<br> жалит как пчела!
           </p>
+          <div>
           <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
             камеру. </p>
+          </div>
           <a href="#" class="link-button">Подробнее</a>
           <table class="item-description">
             <tr>
@@ -349,6 +357,7 @@
   </form>
   <button class="close-popup" type="button">Закрыть</button>
 </section>
-<!--<img src="img/device-index.jpg" style="opacity:0.5;height:2795px;width:1440px;position:absolute; top:0; left:50%; margin-left:-720px;">-->
+<img src="img/device-index.jpg" style="opacity:0.5;height:2795px;width:1440px;position:absolute; top:0; left:50%; margin-left:-720px;">&ndash;&gt;-->
+<!--<img src="img/device-catalog.jpg" style="opacity:0.5;width:1440px;position:absolute; top:0; left:50%; margin-left:-720px;">&ndash;&gt;&ndash;&gt;-->
 </body>
 </html>
