@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="header">
-<div class="container">
+<div class="container container-padding">
   <div class="main-header">
     <a class="main-logo header-logo">
       <img class="logo" src="img/header-logo.png" width="164" height="36" alt="Device">
@@ -72,9 +72,11 @@
   <div class="container">
     <section class="promo-slider">
       <h2 class="visually-hidden">Промо слайдер</h2>
-      <button class="active" id="first-slide">первый слайд</button>
-      <button id="second-slide">второй слайд</button>
-      <button id="third-slide">третий слайд</button>
+      <div class="button-wrap">
+      <button class="control-slide active" id="first-slide"><span class="visually-hidden">первый слайд</span></button>
+      <button class="control-slide" id="second-slide "><span class="visually-hidden">второй слайд</span></button>
+      <button class=" control-slide" id="third-slide"><span class="visually-hidden">третий слайд</span></button>
+      </div>
       <section class="promo-slide promo-slide1">
         <h3 class="visually-hidden">Монопод</h3>
         <div class="promo-img-wrap">
@@ -104,8 +106,10 @@
       </section>
       <section class="promo-slide promo-slide2">
         <h3 class="visually-hidden">Фитнес-браслет</h3>
+        <div class="promo-img-wrap">
         <img class="promo-slide-img slide-img-bracelet" src="img/slider-fitness-bracelet.png"
              alt="Фитнес-браслет" width="345" height="485">
+          </div>
         <div class="slider-wrapper">
           <p class="lead">
             Худеем<br> правильно!
@@ -130,11 +134,13 @@
       </section>
       <section class="promo-slide promo-slide3">
         <h3 class="visually-hidden">Квадрокоптер</h3>
+        <div class="promo-img-wrap">
         <img class="promo-slide-img slide-img-quadcopter" src="img/slider-quadcopter.png"
              alt="квадрокоптер" width="526" height="334">
+          </div>
         <div class="slider-wrapper">
           <p class="lead">
-            Порхает как бабочка,<br> жалит как пчела!
+            Порхает как бабочка, <br>жалит как пчела!
           </p>
           <div>
           <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
@@ -246,7 +252,7 @@
         </section>
 
       </section>
-    </div>
+  </div>
   </div>
   <div class="container">
     <section class="logotype">
@@ -261,7 +267,7 @@
       </ul>
     </section>
   </div>
-  <div class="container margin-container contacts-wrapper">
+  <div class="container contacts-wrapper">
       <section class="about-us">
         <h2>О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -357,7 +363,8 @@
   </form>
   <button class="close-popup" type="button">Закрыть</button>
 </section>
-<img src="img/device-index.jpg" style="opacity:0.5;height:2795px;width:1440px;position:absolute; top:0; left:50%; margin-left:-720px;">&ndash;&gt;-->
+<img src="img/device-index.jpg" style="opacity:0.5;height:2795px;width:1440px;position:absolute; top:0; left:50%; margin-left:-720px;">&ndash;&gt;&ndash;&gt;-->
 <!--<img src="img/device-catalog.jpg" style="opacity:0.5;width:1440px;position:absolute; top:0; left:50%; margin-left:-720px;">&ndash;&gt;&ndash;&gt;-->
+<script src="js/mainJs.js" ></script>
 </body>
 </html>
