@@ -34,7 +34,8 @@
     </div>
     <nav class="main-menu">
       <ul class="site-navigation">
-        <li class="site-navigation-catalog"><a class="main-links" href="catalog.html">Каталог товаров</a>
+        <li class="site-navigation-catalog">
+          <a class="main-links navigation-link" href="catalog.html">Каталог товаров</a>
           <div class="catalog-item-wrap">
             <ul class="catalog-list">
               <li class="catalog-item-photo">
@@ -282,7 +283,8 @@
       </section>
       <section class="contacts">
         <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки.
+        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
+          проверить работоспособность покупки.
           Всякое бывает.</p>
         <div class="map-wrap">
           <a href="#">
@@ -291,7 +293,7 @@
                  height="222">
           </a>
         </div>
-        <a class="link-button link-about-us" href="#">Напишите нам</a>
+        <a id="write-open" class="link-button link-about-us" href="#">Напишите нам</a>
       </section>
     </div>
 </main>
@@ -341,9 +343,8 @@
 </footer>
 <section class="map-popup">
   <h2 class="visually-hidden">Карта</h2>
-  <img class="map-popap-map" src="img/popap-map.png" alt="Наш адрес: город Москва, улица Строителей, дом 15"
-       height="559" width="960">
-  <button class="close-popup" type="button">Закрыть</button>
+  <iframe src="https://yandex.ru/map-widget/v1/-/CBuU7WgdTA" width="960" height="560" frameborder="1" allowfullscreen="true"></iframe>
+  <button class="close-popup" type="button"><span class="visually-hidden">Закрыть</span></button>
 </section>
 <section class="write-popup">
   <h2 class="visually-hidden">Напишите нам</h2>
@@ -356,12 +357,14 @@
       <label for="popup-email">Ваш e-mail:</label>
       <input type="email" id="popup-email" name="email" placeholder="email@example.com">
     </div>
+    <div class="popup-text">
     <label for="popup-text">Текст письма:</label>
-    <textarea id='popup-text' name="text" placeholder="В свободной форме" required rows="4">
+    <textarea id="popup-text" name="text" placeholder="В свободной форме" required>
     </textarea>
+    </div>
     <button class="link-button" type="submit">Отправить</button>
   </form>
-  <button class="close-popup" type="button">Закрыть</button>
+  <button class="close-popup" type="button"><span class="visually-hidden">Закрыть</span></button>
 </section>
 <!--<img src="img/device-index4.jpg" style="opacity:0.5;height:2795px;width:1440px;position:absolute; top:0; left:50%; margin-left:-720px;">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
 <!--<img src="img/device-catalog.jpg" style="opacity:0.5;width:1440px;position:absolute; top:0; left:50%; margin-left:-720px;">&ndash;&gt;&ndash;&gt;-->
