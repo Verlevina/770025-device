@@ -90,10 +90,16 @@
               Стоимость:
             </legend>
             <div class="case-line">
-              <button type="button">От</button>
-              <button type="button">До</button>
-              <label>От<input type="number" name="min-case-value" value="0" min="0" max="10000"> </label>
-              <label>До<input type="number" name="max-case-value" value="5000" min="0" max="10000"> </label>
+              <div class="scale">
+                <div class="bar">
+                  <button class="min-case" type="button"><span class="visually-hidden">От</span></button>
+                  <button class="max-case" type="button"><span class="visually-hidden">До</span></button>
+                </div>
+              </div>
+              <label class="price-value">От
+                <input class="min-value" type="number" name="min-case-value" value="0" min="0" max="10000"> </label>
+              <label class="price-value">До
+                <input class="max-value" type="number" name="max-case-value" value="5000" min="0" max="10000"> </label>
             </div>
           </fieldset>
           <fieldset class="filter-color">
@@ -111,8 +117,10 @@
           </fieldset>
           <fieldset class="filter-bluetooth">
             <legend>Bluetooth</legend>
-            <label><input class="visually-hidden" type="radio" name="bluetooth" value="yes" checked> Есть</label>
-            <label><input class="visually-hidden" type="radio" name="bluetooth" value="no"> Нет</label>
+            <input class="visually-hidden bluetooth" type="radio" id="bluetooth-yes" name="bluetooth" value="yes" checked>
+            <label for="bluetooth-yes">Есть</label>
+            <input class="visually-hidden bluetooth" type="radio" id="bluetooth-no" name="bluetooth" value="no">
+            <label for="bluetooth-no">Нет</label>
           </fieldset>
           <button class="link-button" type="submit">Показать</button>
         </form>
@@ -152,9 +160,9 @@
               <a class="add-compare" href="#">добавить к сравнению</a>
             </div>
             <div class="description-wrap">
-            <h4>Любительская селфи-палка</h4>
-            <p>500 pуб.</p>
-              </div>
+              <h4>Любительская селфи-палка</h4>
+              <p>500 pуб.</p>
+            </div>
           </li>
           <li class="catalog-item">
             <img class="item-img" src="img/catalog-item-2.jpg" alt="Профессиональная селфи-палка" height="380"
@@ -164,9 +172,9 @@
               <a class="add-compare" href="#">добавить к сравнению</a>
             </div>
             <div class="description-wrap">
-            <h4>Профессиональная селфи-палка</h4>
-            <p>1500 pуб.</p>
-              </div>
+              <h4>Профессиональная селфи-палка</h4>
+              <p>1500 pуб.</p>
+            </div>
           </li>
           <li class="catalog-item">
             <img class="item-img" src="img/catalog-item-3.jpg" alt="Непотопляемая селфи-палка" height="380"
@@ -176,8 +184,8 @@
               <a class="add-compare" href="#">добавить к сравнению</a>
             </div>
             <div class="description-wrap">
-            <h4>Непотопляемая селфи-палка</h4>
-            <span>2500 pуб.</span>
+              <h4>Непотопляемая селфи-палка</h4>
+              <span>2500 pуб.</span>
             </div>
           </li>
           <li class="new-label catalog-item">
@@ -188,9 +196,9 @@
               <a class="add-compare" href="#">добавить к сравнению</a>
             </div>
             <div class="description-wrap">
-            <h4>Селфи-палка «Следуй за мной»</h4>
-            <p>4900 pуб.</p>
-              </div>
+              <h4>Селфи-палка «Следуй за мной»</h4>
+              <p>4900 pуб.</p>
+            </div>
           </li>
         </ul>
 
@@ -257,7 +265,7 @@
   </div>
 </footer>
 <img src="img/device-catalog.jpg"
-     style="z-index:1;opacity:0.5;width:1440px;position:absolute; top:0; left:50%; margin-left:-720px;">&ndash;&gt;-->
+style="z-index:1;opacity:0.5;width:1440px;position:absolute; top:0; left:50%; margin-left:-720px;">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
 
 </body>
 </html>
