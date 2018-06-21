@@ -107,7 +107,7 @@ a {
 .main-search label{
   font-size:16px;
 }
-.main-search input[type="text"] {
+.search-text{
   padding:13px;
   border: none;
   text-align: left;
@@ -130,7 +130,7 @@ a {
   opacity: 0.6;
 }
 
-.main-search input[type="text"]:focus {
+.search-text:focus {
   border-bottom: 2px solid #000000;
   padding-bottom:11px;
   color: #000000;
@@ -138,13 +138,13 @@ a {
   opacity: 1;
 }
 
-.main-search input[type="text"]:valid {
+.search-text:valid {
   color: #000000;
 
   opacity: 1;
 }
 
-.main-search input[type="text"]:valid + button {
+.search-text:focus+ button {
   display: inline-block;
 }
 
@@ -782,6 +782,9 @@ width:600px;
 .map-wrap{
   margin-bottom: 60px;
 }
+.map-wrap a{
+  display: block;
+}
 .about-us p, .contacts p{
   margin-bottom:40px;
 }
@@ -859,7 +862,7 @@ width:600px;
   min-height: 130px;
   margin-bottom:50px;
   display:flex;
-  justify-content:center;
+  justify-content: space-between;
   width:100%;
   margin-top: 40px;
 }
@@ -872,10 +875,12 @@ width:600px;
   align-items: flex-end;
 }
 .footer-center{
-  margin:0 auto;
+  margin:0;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .footer-htmlacademy{
   height:40px ;
@@ -1064,10 +1069,9 @@ height: 559px;
 .write-popap-feedback input[type="text"],
 .write-popap-feedback input[type="email"],
 .write-popap-feedback textarea {
-  padding-left:20px;
-  padding-right:20px;
+  padding:2px 20px;
   width:310px;
-  height: 50px;
+  height: 46px;
   background-color: #f2f2f2;
   border: none;
 }
@@ -1076,6 +1080,7 @@ height: 559px;
 .write-popap-feedback input[type="email"]:hover,
 .write-popap-feedback textarea:hover {
   background-color: #eaeaea;
+  border:none;
 
 }
 
@@ -1084,6 +1089,7 @@ height: 559px;
 .write-popap-feedback textarea:focus {
   background-color: #ffffff;
   border: 2px solid #f7e296;
+  padding:0 18px;
 }
 
 .write-popap-feedback input[type="email"]:invalid {
@@ -1376,7 +1382,13 @@ background-image:linear-gradient(to right, #eeeeee 0%, #eeeeee calc(((100% - 120
 .sort-list a.filter-active{
   color:#000000;
 }
-
+.filter .link-button{
+  margin-top: -26px;
+  margin-left: 35px;
+}
+.filter .link-button::before{
+margin-left: -75%;
+width: 150%;}
 .sort-list li{
   display:inline-block;
 }
@@ -1442,8 +1454,7 @@ background-image:linear-gradient(to right, #eeeeee 0%, #eeeeee calc(((100% - 120
 .catalog-item:hover .item-buy-wrap{
   display:flex;
 }
-.item-img:hover{
-opacity:0.7;}
+
 .show-items h4 {
   width: 260px;
   margin-top:0;
@@ -1480,6 +1491,9 @@ background-color:rgba(255,255,255,0.3);
 .item-buy-wrap .add-compare{
   margin-top:20px;
 }
+.item-img{
+  margin-bottom: 20px;
+}
 .item-img:hover,
 .item-img:active {
   opacity: 0.7;
@@ -1498,8 +1512,8 @@ background-color:rgba(255,255,255,0.3);
 }
 .show-items{
   width: 830px;
-  padding-left: 70px;
-  padding-bottom: 65px;
+  padding-left: 80px;
+  padding-bottom: 75px;
 }
 .new-label::before{
   position: absolute;
@@ -1529,12 +1543,13 @@ background-color:rgba(255,255,255,0.3);
 .paginator {
 
   display:flex;
-  padding:30px;
+  min-height:80px;
   justify-content:space-between;
-  background-color: #ebebeb;
+  background-color: rgba(0,0,0,0.08);
 }
 
 .paginator a {
+  padding:0 25px;
   min-width: 70px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight:bold;
@@ -1546,9 +1561,12 @@ background-color:rgba(255,255,255,0.3);
 
   text-align: center;
 }
-
+.paginator > a{
+  display:flex;
+  align-items:center;
+}
 .paginator > a:hover {
-  background-color: #d9d9d9;
+  background-color: rgba(0,0,0,0.08);
 }
 
 .paginator > a:focus {
@@ -1559,9 +1577,9 @@ background-color:rgba(255,255,255,0.3);
 .padination-numbers-list {
   margin:0;
   padding:0;
-  width:90px;
   display:flex;
-  justify-content:space-between;
+  align-items:center;
+  justify-content: center;
   list-style: none;
 }
 .padination-numbers-list li{
@@ -1569,7 +1587,7 @@ background-color:rgba(255,255,255,0.3);
 }
 .padination-numbers-list a {
   color: rgba(0, 0, 0, 0.3);
-
+padding:0 15px;
 }
 
 .padination-numbers-list a:hover {
