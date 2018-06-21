@@ -267,6 +267,27 @@ background:url("../img/header-user.svg") no-repeat 0 0;
 .navigation-link:focus+.catalog-item-wrap{
   display:block;
 }
+.main-links{
+  display:block;
+}
+.navigation-link{
+  padding-right:30px;
+  position:relative;
+}
+.navigation-link::after,
+.navigation-link::before{
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  content: "";
+  width: 2px;
+  height: 17px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.navigation-link::before{
+transform:rotate(90deg);
+}
 .site-navigation a:focus {
   color: rgba(0, 0, 0, 0.3);
 }
