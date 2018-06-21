@@ -638,18 +638,17 @@ height:40px;
 
 .service .service-item:active,
 .service .service-item:focus,
-.service-active
-{
+.service-active {
   color: rgb(247, 225, 132);
 }
-.service .service-item::before{
+.service-check .link-button::before{
   width:160px;
 }
-.service .service-item:active::before,
-.service .service-item:focus::before,
-.service-active{
+.service-check .link-button:active::before,
+.service-check .link-button:focus::before,
+.link-button.service-active:before{
  background-color:#000000;
-  width:280px;
+  width:290px;
   height:40px;
   top:0;
 }
