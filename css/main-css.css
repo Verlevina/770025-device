@@ -148,6 +148,7 @@ a {
 
 .search-text:focus+ button {
   display: inline-block;
+  vertical-align: top;
 }
 
 .search-button {
@@ -379,6 +380,7 @@ transform: rotate(90deg);
 .promo-slider button {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   margin-left: 17px;
   padding: 0;
   width: 13px;
@@ -749,7 +751,8 @@ transform: rotate(90deg);
   width: 600px;
   box-sizing: border-box;
 }
-.about-us::before,.contacts::before{
+.about-us::before,
+.contacts::before{
   right: 480px;
   top: 0;
   content: "";
@@ -886,7 +889,7 @@ transform: rotate(90deg);
 }
 .footer-user-wrap{
   display: flex;
-  min-width: 490px;
+  width: 500px;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
@@ -904,6 +907,9 @@ transform: rotate(90deg);
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-end;
+}
+.user-navigation .login-exit{
+  margin-left: -10px;
 }
 .footer-right span{
   line-height: 20px;
@@ -1277,6 +1283,7 @@ height: 559px;
 }
 .sort-filter{
  display: inline-block;
+  vertical-align: middle;
 }
 
 .filter-label h2,
@@ -1312,6 +1319,7 @@ height: 559px;
   top: -9px;
   left: 0;
   display: inline-block;
+  vertical-align: middle;
   border: none;
   height: 20px;
   width: 20px;
@@ -1416,8 +1424,24 @@ height: 559px;
   color: #000000;
 }
 
-.filter-color input[type="checkbox"]:disabled + label {
+.filter-color input[type="checkbox"]:disabled + label{
   color: rgb(166, 166, 166);
+}
+.filter-color input[type="checkbox"]:disabled + label::before{
+  opacity:0.25;
+}
+
+.filter-color input[type="checkbox"]:hover + label::before,
+.filter-color input[type="checkbox"]:focus + label::before{
+  opacity:0.6;
+}
+.filter-bluetooth input[type="radio"]:disabled + label::before{
+  opacity:0.25;
+}
+
+.filter-bluetooth input[type="radio"]:hover + label::before,
+.filter-bluetooth input[type="radio"]:focus + label::before{
+  opacity:0.6;
 }
 .sort-list{
   padding: 0;
@@ -1450,8 +1474,10 @@ height: 559px;
 .filter .link-button::before{
   margin-left: -75%;
   width: 150%;}
+
 .sort-list li{
   display: inline-block;
+  vertical-align: middle;
 }
 .sort-list>li:not(:first-child){
   margin-left: 24px;
@@ -1462,6 +1488,7 @@ height: 559px;
 }
 .arrow{
   display: inline-block;
+  vertical-align: middle;
   padding-left: 20px;
 }
 .arrow::before{
@@ -1471,7 +1498,8 @@ height: 559px;
   border-left-width: 5px;
   border-right-color: transparent;
   border-left-color: transparent;
-  display: inline-block
+  display: inline-block;
+  vertical-align: middle;
 }
 .arrow-down::before{
   border-bottom-width: 0;
