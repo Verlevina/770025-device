@@ -1116,6 +1116,9 @@ margin-bottom: 15px;
   box-shadow: inset 3px 3px 7px 0 rgba(0,0,0,0.35),
   0 10px 20px 0 rgba(0,0,0,0.2);
 }
+.map-popup iframe{
+  border:none;
+}
 .popap-half{
   width: 50%;
   display: flex;
