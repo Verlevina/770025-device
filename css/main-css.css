@@ -927,6 +927,12 @@ transform: rotate(90deg);
   width: 30px;
   margin-bottom: 2px;
 }
+.footer-htmlacademy:hover{
+  opacity:0.6;
+}
+.footer-htmlacademy:focus{
+  opacity:0.3;
+}
 .footer-menu{
   width: 440px;
   display: flex;
