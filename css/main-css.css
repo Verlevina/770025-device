@@ -54,6 +54,9 @@ img{
   height: 1px;
   margin: -1px;
 }
+.visually-hidden-left{
+  margin-left:-50px;
+}
 a {
   text-decoration: none;
 }
@@ -165,10 +168,10 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 .user-block-wrapper{
-  min-width: 504px;
+  width: 504px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
 }
 
 .user-navigation,
@@ -290,6 +293,12 @@ background: url("../img/header-user.svg") no-repeat 0 0;
 .navigation-link{
   padding-right: 30px;
   position: relative;
+  max-width: 256px;
+}
+.site-navigation-contacts,
+.site-navigation-warranty,
+.site-navigation-delivery{
+  max-width: 140px;
 }
 .navigation-link::after,
 .navigation-link::before{
@@ -392,7 +401,6 @@ transform: rotate(90deg);
   border-radius: 50%;
 }
 
-
 .promo-slider {
   position: relative;
   min-height: 540px;
@@ -400,11 +408,10 @@ transform: rotate(90deg);
   background-image: linear-gradient(to bottom, #f7e296 0%,
   #f7e296 115px, #ffffff 115px, #ffffff 100%);
   color: #000000;
-  counter-reset: slider;
+  counter-reset: slideNumber;
 }
-.promo-slide::after{
-  counter-increment: slider;
-  content: "0" counter(slider);
+.promo-slide::before{
+  content:'';
   position: absolute;
   font-size: 180px;
   font-family: "Gilroy", "Arial", sans-serif;
@@ -416,7 +423,16 @@ transform: rotate(90deg);
   top: -10px;
   z-index: -1;
 }
-.promo-slide::before{
+.promo-slide1::before {
+  content: '01';
+}
+.promo-slide2::before {
+  content: '02';
+}
+.promo-slide3::before {
+  content: '03';
+}
+.promo-slide::after{
   right: 460px;
   top: 39px;
   content: "";
@@ -745,7 +761,14 @@ transform: rotate(90deg);
 }
 
 .contacts{
-  padding-left: 40px;
+  padding-left: 20px;
+}
+.contacts .link-button{
+  margin-left: 35px;
+}
+.contacts .link-button::before{
+  margin-left: -67%;
+  width: 134%;
 }
 .logotype{
   margin-top:90px;
@@ -820,12 +843,12 @@ transform: rotate(90deg);
 .logistic-list span {
   color: #000000;
 }
-.link-about-us{
-  margin-left: 28px;
+.about-us .link-button{
+  margin-left: 17px;
 }
-.link-about-us::before{
-  margin-left: -65%;
-  width: 130%;
+.about-us .link-button::before{
+  margin-left: -58%;
+  width: 114%;
 }
 /*footer*/
 .footer-wrap{
@@ -877,11 +900,13 @@ transform: rotate(90deg);
 }
 .footer-right{
   width: 280px;
-  margin-top: -5px;
   display:flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-end;
+}
+.footer-right span{
+  line-height: 20px;
 }
 .footer-center{
   margin: 0;
@@ -894,6 +919,7 @@ transform: rotate(90deg);
 .footer-htmlacademy{
   height: 40px;
   width: 30px;
+  margin-bottom: 2px;
 }
 .footer-menu{
   width: 440px;
@@ -918,7 +944,9 @@ transform: rotate(90deg);
 .footer-user-buy a {
   color: rgba(255, 255, 255, 0.7);
 }
-
+.footer-user-navigation{
+margin-right: 40px;
+}
 .footer-user-navigation a:hover,
 .footer-user-buy a:hover {
   color: rgb(255, 255, 255);
@@ -944,6 +972,7 @@ transform: rotate(90deg);
 .footer-social {
   text-align: center;
   margin: 0;
+  margin-bottom: 6px;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -994,6 +1023,7 @@ transform: rotate(90deg);
 .footer-right path{
   fill: #f0c52e;
 }
+
 .social-btn a:hover{
   opacity: 0.6;
 }
@@ -1543,7 +1573,7 @@ background-color: rgba(255,255,255,0.3);
 .show-items{
   width: 830px;
   padding-left: 80px;
-  padding-bottom: 75px;
+  padding-bottom: 76px;
 }
 .new-label::before{
   position: absolute;
@@ -1571,15 +1601,15 @@ background-color: rgba(255,255,255,0.3);
   text-shadow: 0 0 2px  rgba(0,0,0,0.2);
 }
 .paginator {
-
   display: flex;
-  min-height: 80px;
+  min-height: 70px;
+  margin-top: 9px;
   justify-content: space-between;
   background-color: rgba(0,0,0,0.08);
 }
 
 .paginator a {
-  padding: 0 25px;
+  padding: 0 30px;
   min-width: 70px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight:bold;
@@ -1607,12 +1637,14 @@ background-color: rgba(255,255,255,0.3);
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap:wrap;
+  flex-grow:1;
   align-items: center;
   justify-content: center;
   list-style: none;
 }
-.padination-numbers-list li{
-
+.pagination-item:first-child{
+  margin-left: 10px;
 }
 .padination-numbers-list a {
   color: rgba(0, 0, 0, 0.3);
