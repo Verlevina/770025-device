@@ -558,7 +558,6 @@ transform: rotate(90deg);
 .link-button:focus,
 .link-button:active {
   color: rgba(0, 0, 0, 0.5);
-  background-color: #f0c52e;
 }
 .item-description{
   margin-top: 42px;
