@@ -607,8 +607,21 @@ transform: rotate(90deg);
   margin: auto;
 }
 .product-item .product-monopod{
-  margin: 0 auto;
+  margin: 2px auto;
   align-items: flex-start;
+}
+.product-item .product-clock {
+  margin-left: 55px;
+}
+.product-item .product-camera{
+  margin-left:49px;
+}
+.product-item .product-bracelet {
+  margin-left: 28px;
+  margin-top: 50px;
+}
+.product-item .product-quadrocopter {
+  margin-top:50px;
 }
 .product-item{
   display: flex;
