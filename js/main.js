@@ -13,7 +13,6 @@ var mapOpen = document.querySelector(".map-wrap>a");
 var writeOpen = document.querySelector(".contacts>a");
 var userText = document.querySelector("#popup-text");
 
-//slider
 for (var i = 0; i < controlSlide.length; i++) {
   controlSlide[i].addEventListener("click", changeSlide);
 }
@@ -44,15 +43,14 @@ function changeCLass(controlSlide, promoSlide, thisItem, active, display) {
   }
   thisItem.classList.add(active);
 }
-//попапы
-//close
+
 try {
   storageName = localStorage.getItem("userName");
   storageEmail = localStorage.getItem("email");
 } catch (err) {
   isStorageSupport = false;
 }
-//open
+
 mapOpen.addEventListener("click", function (evt) {
     evt.preventDefault();
     toOpenPopup(mapPopup);
@@ -113,7 +111,7 @@ function removeError(popup) {
     userText.classList.remove("errorInput");
   }
 }
-//close
+
 closePopup2.addEventListener("click", function (evt) {
     evt.preventDefault();
     toClosePopup(writePopup);
