@@ -459,12 +459,6 @@ transform: rotate(90deg);
   z-index: 0;
 }
 
-.promo-slide2{
-  display: none;
-}
-.promo-slide3{
-  display: none;
-}
 .promo-slide2 img{
   margin-top: 15px;
   margin-left: 15px;
@@ -710,12 +704,6 @@ transform: rotate(90deg);
   line-height: 48px;
   letter-spacing: 1px;
   text-align: left;
-}
-.service-warranty{
-  display: none;
-}
-.service-credit{
-  display: none;
 }
 
 .service p{
@@ -1767,7 +1755,15 @@ background-color: rgba(255,255,255,0.3);
   animation-duration: 0.6s;
   animation-timing-function:ease-in-out;
 }
-
+.slider-block{
+  display:block;
+}
+.slider-flex{
+  display:flex;
+}
+.slider-none{
+  display:none;
+}
 @keyframes shake {
   0%,
   100% {
