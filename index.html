@@ -311,12 +311,12 @@
         проверить работоспособность покупки.
         Всякое бывает.</p>
       <div class="map-wrap">
-        <a>
+        <a href="#">
           <img class="map" src="img/contacts-map.png" alt="Наш адрес: город Москва, улица Строителей, дом 15"
                width="560" height="222">
         </a>
       </div>
-      <a id="write-open" class="link-button">Напишите нам</a>
+      <a class="link-button" href="#">Напишите нам</a>
     </section>
   </div>
 </main>
@@ -422,7 +422,7 @@
     </div>
   </div>
 </footer>
-<section class="map-popup">
+<section class="map-popup modal-close">
   <h2 class="visually-hidden">Карта</h2>
   <iframe src="https://yandex.ru/map-widget/v1/-/CBuU7WgdTA" width="960" height="560"></iframe>
   <button class="close-popup" type="button">
@@ -431,20 +431,20 @@
     </span>
   </button>
 </section>
-<section class="write-popup">
+<section class="write-popup modal-close">
   <h2 class="visually-hidden">Напишите нам</h2>
-  <form class="write-popap-feedback" method="post" action="http://echo.htmlacademy.ru">
-    <div class="popap-half">
+  <form class="write-popup-feedback" method="post" action="http://echo.htmlacademy.ru">
+    <div class="popup-half">
       <label for="popup-name">Ваше имя:</label>
-      <input type="text" id="popup-name" name="name" placeholder="Имя Фамилия" required>
+      <input type="text" id="popup-name" name="name" placeholder="Имя Фамилия">
     </div>
-    <div class="popap-half">
+    <div class="popup-half">
       <label for="popup-email">Ваш e-mail:</label>
       <input type="email" id="popup-email" name="email" placeholder="email@example.com">
     </div>
     <div class="popup-text">
       <label for="popup-text">Текст письма:</label>
-    <textarea id="popup-text" name="text" placeholder="В свободной форме" required>
+    <textarea id="popup-text" name="text" placeholder="В свободной форме">
     </textarea>
     </div>
     <button class="link-button" type="submit">Отправить</button>
@@ -453,8 +453,6 @@
 </section>
 <!--<img src="img/device-index.jpg" style="position:absolute; top:0; left:50%; margin-left:-720px; opacity:0.4; z-index:99;-->
  <!--width: 1440px; min-width: 1440px!important;">-->
-
-
 <script src="js/mainJs.js"></script>
 </body>
 </html>

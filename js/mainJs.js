@@ -40,28 +40,97 @@ var closePopup1 = document.getElementsByClassName('close-popup')[0];
 var closePopup2 = document.getElementsByClassName('close-popup')[1];
 var mapPopup = document.getElementsByClassName('map-popup')[0];
 var writePopup = document.getElementsByClassName('write-popup')[0];
-closePopup2.addEventListener('click', function () {
-    toClosePopup(writePopup);
-  }
-);
-closePopup1.addEventListener('click', function () {
-    toClosePopup(mapPopup);
-  }
-);
-function toClosePopup(popup) {
-  popup.style.display = 'none';
+var userName=document.querySelector('#popup-name');
+var email=document.querySelector('#popup-email');
+var form=document.querySelector('.write-popup-feedback');
+var mapOpen=document.querySelector('.map-wrap>a');
+var writeOpen=document.querySelector('.contacts>a');
+var userText=document.querySelector('#popup-text');
+
+try {
+  storageName = localStorage.getItem("userName");
+  storageEmail = localStorage.getItem("email");
+} catch (err) {
+  isStorageSupport = false;
 }
+
 //open
-var mapOpen=document.getElementsByClassName('map')[0];
-var writeOpen=document.getElementById('write-open');
-mapOpen.addEventListener('click', function () {
+
+mapOpen.addEventListener('click', function (evt) {
+    evt.preventDefault();
     toOpenPopup(mapPopup);
   }
 );
-writeOpen.addEventListener('click', function () {
+writeOpen.addEventListener('click', function (evt) {
+    evt.preventDefault();
     toOpenPopup(writePopup);
   }
 );
+
+form.addEventListener("submit", function (evt) {
+  if (!userName.value || !email.value || !userText.value || userText.value=="    ") {
+    evt.preventDefault();
+    removeError(writePopup);
+    writePopup.offsetWidth = writePopup.offsetWidth;
+    error(writePopup);
+  } else {
+    localStorage.setItem("userName", userName.value);
+    localStorage.setItem("email", email.value);
+  }
+});
+userName.addEventListener('blur',removeError);
+
 function  toOpenPopup(popup){
-  popup.style.display='block';
+  popup.classList.add('modal-show');
+  if (popup==writePopup){
+    if (storageName) {
+      userName.value = storageName;
+      email.value=storageEmail;
+      userText.focus();
+    }
+    else {
+      userName.focus();
+    }
+  }
+}
+
+function error(popup){
+  popup.classList.add('errorInput');
+  if(!userName.value){
+    userName.classList.add('errorInput');
+  }
+  if(!email.value){
+    email.classList.add('errorInput');
+  }
+  if(!userText.value|| userText.value=="    "){
+    userText.classList.add('errorInput');
+  }
+}
+function removeError(popup){
+  popup.classList.remove('errorInput');
+  if(userName.value) {
+    userName.classList.remove('errorInput');
+  }
+  if(email.value) {
+    email.classList.remove('errorInput');
+  }
+  if(userText.value || userText.value!=="    "){
+    userText.classList.remove('errorInput');
+  }
+}
+//close
+closePopup2.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    toClosePopup(writePopup);
+  }
+);
+closePopup1.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    toClosePopup(mapPopup);
+  }
+);
+
+function toClosePopup(popup) {
+  popup.classList.remove('modal-show');
+  popup.classList.add('modal-close');
 }
