@@ -65,7 +65,6 @@ form.addEventListener("submit", function (evt) {
   if (!userName.value || !email.value || !userText.value || userText.value == "    ") {
     evt.preventDefault();
     removeError(writePopup);
-    //не понятная строчка, но без нее не работает.
     writePopup.offsetWidth = writePopup.offsetWidth;
     error(writePopup);
   } else {
